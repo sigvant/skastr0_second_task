@@ -53,13 +53,14 @@ let verifyEmpty = (input, i) => {
 
 let analyseInput = (input, i) => {
 
-	error = false;
+	input = input.replace(',', '');
+	
 	if(input === 'true' || input === 'false') {
 		return console.log(`boolean`)
 	}
 
 	if((typeof (parseFloat(input)) == 'number') && !(isNaN(input))) {
-			input = input.replace(',', '');
+			
 			
 			if(parseFloat(input)%1 == 0) {
 				return console.log(`number, integer`);
